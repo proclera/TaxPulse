@@ -1,0 +1,6 @@
+{
+  "name": "Tax Pulse - Tax Litigation Experts",
+  "description": "Get free tax advice from the foremost tax consultant in Pakistan. Complete solutions to complex tax issues, especially Income Tax, Sales Tax and Customs.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

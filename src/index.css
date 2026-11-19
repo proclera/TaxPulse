@@ -325,7 +325,7 @@
 /* A gold trace follows the existing heartbeat without altering the original logo. */
 .logo-mark { position: relative; display: inline-flex; }
 .logo-pulse { position: absolute; inset: 0; pointer-events: none; opacity: 0; }
-.logo-pulse-shape { clip-path: polygon(70.3% 56%, 76.5% 56%, 76.5% 15%, 80.5% 15%, 80.5% 0%, 84% 0%, 84% 30%, 87% 56%, 92% 56%, 92% 65%, 86% 65%, 84% 51%, 84% 100%, 79.8% 100%, 79.8% 64%, 70.3% 64%); filter: brightness(0) saturate(100%) invert(58%) sepia(91%) saturate(1204%) hue-rotate(356deg) brightness(95%) contrast(92%); }
+.logo-pulse-shape { clip-path: polygon(70.3% 56%, 76.5% 56%, 76.5% 15%, 80.5% 15%, 80.5% 0%, 92% 0%, 92% 100%, 80.5% 100%, 80.5% 64%, 70.3% 64%); filter: brightness(0) saturate(100%) invert(58%) sepia(91%) saturate(1204%) hue-rotate(356deg) brightness(95%) contrast(92%); }
 @media (prefers-reduced-motion: no-preference) {
   .logo-pulse { animation: logo-heartbeat-trace 4.5s cubic-bezier(.42,0,.3,1) infinite; }
   @keyframes logo-heartbeat-trace {

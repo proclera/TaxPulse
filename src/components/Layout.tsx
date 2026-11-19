@@ -112,7 +112,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             <img
               src={FIRM_INFO.logo.src}
               alt={FIRM_INFO.logo.alt}
-              className="h-10 w-auto sm:h-11"
+              className="h-12 w-auto sm:h-14 logo-theme"
             />
           </AppLink>
 

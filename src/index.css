@@ -318,3 +318,6 @@
 .slider-control:hover { background: var(--color-primary); border-color: var(--color-primary); color: white; }
 .consultation-form input:not([type="checkbox"]), .consultation-form textarea, .consultation-form select { transition: border-color 180ms ease, box-shadow 180ms ease; }
 .consultation-form input:not([type="checkbox"]):focus, .consultation-form textarea:focus, .consultation-form select:focus { border-color: var(--color-primary); box-shadow: 0 0 0 4px rgba(30,58,138,.10); }
+
+/* Unify the existing transparent logo with the navy brand palette. */
+.logo-theme { filter: brightness(0) saturate(100%) invert(17%) sepia(28%) saturate(3468%) hue-rotate(207deg) brightness(92%) contrast(93%); }

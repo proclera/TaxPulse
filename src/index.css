@@ -321,3 +321,17 @@
 
 /* Unify the existing transparent logo with the navy brand palette. */
 .logo-theme { filter: brightness(0) saturate(100%) invert(17%) sepia(28%) saturate(3468%) hue-rotate(207deg) brightness(92%) contrast(93%); }
+
+/* A gold trace follows the existing heartbeat without altering the original logo. */
+.logo-mark { position: relative; display: inline-flex; }
+.logo-pulse { position: absolute; inset: 0; pointer-events: none; opacity: 0; filter: brightness(0) saturate(100%) invert(58%) sepia(91%) saturate(1204%) hue-rotate(356deg) brightness(95%) contrast(92%); }
+@media (prefers-reduced-motion: no-preference) {
+  .logo-pulse { animation: logo-heartbeat-trace 3.8s ease-in-out infinite; }
+  @keyframes logo-heartbeat-trace {
+    0%, 10% { opacity: 0; clip-path: inset(0 22% 19% 78%); }
+    14% { opacity: 1; clip-path: inset(0 22% 19% 78%); }
+    55% { opacity: 1; clip-path: inset(0 0 19% 78%); }
+    75% { opacity: 1; clip-path: inset(0 0 19% 78%); }
+    90%, 100% { opacity: 0; clip-path: inset(0 0 19% 78%); }
+  }
+}

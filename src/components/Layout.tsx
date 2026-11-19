@@ -109,11 +109,19 @@ export function Layout({ children }: { children: React.ReactNode }) {
             aria-label="Tax Pulse Home"
             className="inline-flex shrink-0 items-center py-1"
           >
-            <img
-              src={FIRM_INFO.logo.src}
-              alt={FIRM_INFO.logo.alt}
-              className="h-12 w-auto sm:h-14 logo-theme"
-            />
+            <span className="logo-mark">
+              <img
+                src={FIRM_INFO.logo.src}
+                alt={FIRM_INFO.logo.alt}
+                className="h-12 w-auto sm:h-14 logo-theme"
+              />
+              <img
+                src={FIRM_INFO.logo.src}
+                alt=""
+                aria-hidden="true"
+                className="logo-pulse h-12 w-auto sm:h-14"
+              />
+            </span>
           </AppLink>
 
           <nav aria-label="Primary Navigation" className="hidden items-center gap-1 lg:flex">

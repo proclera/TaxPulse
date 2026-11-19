@@ -103,7 +103,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
       {/* Primary Sticky Navigation */}
       <header className={`sticky top-0 z-40 border-b border-[var(--color-border)] bg-white/98 backdrop-blur-sm transition-shadow duration-300 ${scrolled ? 'shadow-[0_8px_30px_rgba(11,23,57,0.10)]' : ''}`}>
-        <div className="mx-auto flex min-h-[74px] max-w-[1200px] items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto flex min-h-[80px] max-w-[1280px] items-center justify-between gap-3 px-4 sm:px-6 lg:px-8">
           <AppLink
             to="/"
             aria-label="Tax Pulse Home"
@@ -113,22 +113,22 @@ export function Layout({ children }: { children: React.ReactNode }) {
               <img
                 src={FIRM_INFO.logo.src}
                 alt={FIRM_INFO.logo.alt}
-                className="h-12 w-auto sm:h-14 logo-theme"
+                className="h-14 w-auto sm:h-16 logo-theme"
               />
               <img
                 src={FIRM_INFO.logo.src}
                 alt=""
                 aria-hidden="true"
-                className="logo-pulse h-12 w-auto sm:h-14"
+                className="logo-pulse h-14 w-auto sm:h-16"
               />
             </span>
           </AppLink>
 
-          <nav aria-label="Primary Navigation" className="hidden items-center gap-1 lg:flex">
+          <nav aria-label="Primary Navigation" className="hidden items-center gap-0 xl:flex">
             <AppLink
               to="/"
               aria-current={route.kind === 'home' ? 'page' : undefined}
-              className={`tx-transition rounded px-3 py-2 text-sm font-bold ${
+              className={`tx-transition rounded px-2.5 py-2 text-[13px] font-bold whitespace-nowrap ${
                 route.kind === 'home'
                   ? 'text-[var(--color-primary)] underline decoration-[var(--color-accent)] decoration-2 underline-offset-8'
                   : 'text-[var(--color-foreground)] hover:text-[var(--color-primary)]'
@@ -143,7 +143,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 aria-expanded={desktopFirmOpen}
                 aria-haspopup="true"
                 onClick={() => setDesktopFirmOpen((o) => !o)}
-                className={`tx-transition inline-flex cursor-pointer items-center gap-1 rounded px-3 py-2 text-sm font-bold ${
+                className={`tx-transition inline-flex cursor-pointer items-center gap-1 rounded px-2.5 py-2 text-[13px] font-bold whitespace-nowrap ${
                   firmActive
                     ? 'text-[var(--color-primary)] underline decoration-[var(--color-accent)] decoration-2 underline-offset-8'
                     : 'text-[var(--color-foreground)] hover:text-[var(--color-primary)]'
@@ -186,7 +186,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             <AppLink
               to="/practice-areas/"
               aria-current={route.kind === 'practice-areas' ? 'page' : undefined}
-              className={`tx-transition rounded px-3 py-2 text-sm font-bold ${
+              className={`tx-transition rounded px-2.5 py-2 text-[13px] font-bold whitespace-nowrap ${
                 route.kind === 'practice-areas'
                   ? 'text-[var(--color-primary)] underline decoration-[var(--color-accent)] decoration-2 underline-offset-8'
                   : 'text-[var(--color-foreground)] hover:text-[var(--color-primary)]'
@@ -204,7 +204,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                   ? 'page'
                   : undefined
               }
-              className={`tx-transition rounded px-3 py-2 text-sm font-bold ${
+              className={`tx-transition rounded px-2.5 py-2 text-[13px] font-bold whitespace-nowrap ${
                 route.kind === 'articles' ||
                 route.kind === 'article' ||
                 (route.kind === 'category' && route.categorySlug !== 'international-taxation')
@@ -222,7 +222,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                   ? 'page'
                   : undefined
               }
-              className={`tx-transition rounded px-3 py-2 text-sm font-bold ${
+              className={`tx-transition rounded px-2.5 py-2 text-[13px] font-bold whitespace-nowrap ${
                 route.kind === 'category' && route.categorySlug === 'international-taxation'
                   ? 'text-[var(--color-primary)] underline decoration-[var(--color-accent)] decoration-2 underline-offset-8'
                   : 'text-[var(--color-foreground)] hover:text-[var(--color-primary)]'
@@ -236,7 +236,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
               aria-current={
                 route.kind === 'gallery' || route.kind === 'gallery-album' ? 'page' : undefined
               }
-              className={`tx-transition rounded px-3 py-2 text-sm font-bold ${
+              className={`tx-transition rounded px-2.5 py-2 text-[13px] font-bold whitespace-nowrap ${
                 route.kind === 'gallery' || route.kind === 'gallery-album'
                   ? 'text-[var(--color-primary)] underline decoration-[var(--color-accent)] decoration-2 underline-offset-8'
                   : 'text-[var(--color-foreground)] hover:text-[var(--color-primary)]'
@@ -248,7 +248,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             <AppLink
               to="/contact-us/"
               aria-current={route.kind === 'contact' ? 'page' : undefined}
-              className={`tx-transition rounded px-3 py-2 text-sm font-bold ${
+              className={`tx-transition rounded px-2.5 py-2 text-[13px] font-bold whitespace-nowrap ${
                 route.kind === 'contact'
                   ? 'text-[var(--color-primary)] underline decoration-[var(--color-accent)] decoration-2 underline-offset-8'
                   : 'text-[var(--color-foreground)] hover:text-[var(--color-primary)]'
@@ -261,7 +261,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           <div className="flex items-center gap-2">
             <AppLink
               to="/contact-us/"
-              className="tx-transition hidden min-h-[44px] items-center justify-center rounded-md bg-[var(--color-primary)] px-4 py-2 text-sm font-bold text-[var(--color-on-primary)] hover:bg-[var(--color-secondary)] sm:inline-flex"
+              className="tx-transition hidden min-h-[44px] items-center justify-center rounded-md bg-[var(--color-primary)] px-4 py-2 text-sm font-bold text-[var(--color-on-primary)] hover:bg-[var(--color-secondary)] sm:inline-flex xl:hidden 2xl:inline-flex"
             >
               Request Case Assessment
             </AppLink>
@@ -273,7 +273,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
               aria-controls="mobile-navigation-drawer"
               aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
               onClick={() => setMobileOpen((prev) => !prev)}
-              className="tx-transition inline-flex min-h-[44px] min-w-[44px] cursor-pointer items-center justify-center rounded-md border border-[var(--color-border)] bg-white text-[var(--color-primary)] hover:bg-[var(--color-muted)] lg:hidden"
+              className="tx-transition inline-flex min-h-[44px] min-w-[44px] cursor-pointer items-center justify-center rounded-md border border-[var(--color-border)] bg-white text-[var(--color-primary)] hover:bg-[var(--color-muted)] xl:hidden"
             >
               {mobileOpen ? (
                 <X className="h-5 w-5" aria-hidden="true" />
@@ -289,7 +289,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           <nav
             id="mobile-navigation-drawer"
             aria-label="Mobile Navigation"
-            className="menu-enter border-t border-[var(--color-border)] bg-white px-4 py-4 lg:hidden"
+            className="menu-enter border-t border-[var(--color-border)] bg-white px-4 py-4 xl:hidden"
           >
             <div className="flex flex-col space-y-1">
               <AppLink

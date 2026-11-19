@@ -115,12 +115,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 alt={FIRM_INFO.logo.alt}
                 className="h-14 w-auto sm:h-16 logo-theme"
               />
-              <img
-                src={FIRM_INFO.logo.src}
-                alt=""
-                aria-hidden="true"
-                className="logo-pulse h-14 w-auto sm:h-16"
-              />
+              <span className="logo-pulse" aria-hidden="true">
+                <img src={FIRM_INFO.logo.src} alt="" className="logo-pulse-shape h-14 w-auto sm:h-16" />
+              </span>
             </span>
           </AppLink>
 
